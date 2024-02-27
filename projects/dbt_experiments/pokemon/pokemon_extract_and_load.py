@@ -2,17 +2,18 @@ import pandas as pd
 import requests
 import snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
+import os
 
 
 def get_snowflake_con_and_cursor():
     con = snowflake.connector.connect(
-        user="XXX",
-        role="XXX_ADMIN",
-        database="XXX_DB_DEV",
-        warehouse="XXX_WH",
-        account="XXX.eu-west-1",
-        schema="TEST",
-        authenticator="externalbrowser",
+        user=os.getenv("SNOWFLAKE_USER"),
+        role=os.getenv("SNOWFLAKE_ROLE"),
+        database=os.getenv("SNOWFLAKE_DATABASE"),
+        warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
+        account=os.getenv("SNOWFLAKE_ACCOUNT"),
+        schema=os.getenv("SNOWFLAKE_SCHEMA"),
+        authenticator=os.getenv("SNOWFLAKE_AUTHENTICATOR"),
     )
 
     cursor = con.cursor()
