@@ -1,0 +1,4 @@
+git+ssh://git.flix.tech/market/growth/ma-core/ma-co.git@v3.8.1#egg=ma_co[snowflake,microsoft_teams]
+git+ssh://git.flix.tech/market/channels/infrastructure/components/ox.git@v4.2.0#egg=ox[db]
+#zeep==4.2.1
+#boto3==1.19.8
