@@ -6,11 +6,11 @@ from snowflake.connector.pandas_tools import write_pandas
 
 def get_snowflake_con_and_cursor():
     con = snowflake.connector.connect(
-        user="B35B9960-ED81-456E-8CEA-7B5EE529B28A",
-        role="MARKETINGGROWTH_ADMIN",
-        database="MARKETINGGROWTH_DB_DEV",
-        warehouse="MARKETINGGROWTH_WH",
-        account="wk41990.eu-west-1",
+        user="XXX",
+        role="XXX_ADMIN",
+        database="XXX_DB_DEV",
+        warehouse="XXX_WH",
+        account="XXX.eu-west-1",
         schema="TEST",
         authenticator="externalbrowser",
     )
