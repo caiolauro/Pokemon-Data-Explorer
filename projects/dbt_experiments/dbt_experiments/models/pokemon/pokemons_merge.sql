@@ -11,5 +11,11 @@ from pokemons
 {% if is_incremental() %}
     where 
     (name || hp || attack || defense || specialattack || specialdefense || speed ) 
-    not in (select name || hp || attack || defense || specialattack || specialdefense || speed from {{ this }})
+    not in (
+            select 
+            name || hp || attack || defense || specialattack || specialdefense || speed 
+            from {{ this }}
+            )
 {% endif %}
+
+
